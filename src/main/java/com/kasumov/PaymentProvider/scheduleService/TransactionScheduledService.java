@@ -54,7 +54,7 @@ public class TransactionScheduledService {
         if (card.getAmount().compareTo(transaction.getAmount()) < 0) {
             transaction.setTransactionStatus(TransactionStatus.FAILED);
             return notificationService.sendTransactionNotification(transaction, "NOT_ENOUGH_MONEY", TransactionStatus.FAILED);
-        } else if ((int) (Math.random() * 5) == 1) {
+        }  if ((int) (Math.random() * 5) == 1) {
             transaction.setTransactionStatus(TransactionStatus.FAILED);
             return notificationService.sendTransactionNotification(transaction, "INTERNAL_ERROR", TransactionStatus.FAILED);
         } else {
@@ -66,7 +66,7 @@ public class TransactionScheduledService {
         if (card.getAmount().compareTo(transaction.getAmount()) < 0) {
             transaction.setTransactionStatus(TransactionStatus.FAILED);
             return notificationService.sendTransactionNotification(transaction, "NOT_ENOUGH_MONEY", TransactionStatus.FAILED);
-        } else if ((int) (Math.random() * 5) == 1) {
+        } if ((int) (Math.random() * 5) == 1) {
             transaction.setTransactionStatus(TransactionStatus.FAILED);
             return notificationService.sendTransactionNotification(transaction, "INTERNAL_ERROR", TransactionStatus.FAILED);
         } else {
