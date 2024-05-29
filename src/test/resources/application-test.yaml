@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: payment_provider
+  main:
+      allow-bean-definition-overriding: true
+  flyway:
+    locations: classpath:db/test_migration
+logging:
+  level:
+    root: info

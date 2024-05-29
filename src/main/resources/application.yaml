@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+
+  application:
+    name: payment_provider
+  flyway:
+    user: postgres
+    password: password
+    url: jdbc:postgresql://localhost:5432/postgres
+    locations: classpath:db/migration
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: password
+logging:
+  level:
+    root: info
